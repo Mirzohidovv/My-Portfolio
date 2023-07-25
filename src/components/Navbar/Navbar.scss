@@ -1,0 +1,151 @@
+.navbar {
+  padding: 45px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media(475) {
+    justify-content: center;
+    column-gap: 20px;
+    padding: 40px 10px;
+  }
+
+
+
+
+
+
+  &__logo {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.16;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    @include media(575) {
+      font-size: 23px;
+    }
+
+    @include media(475) {
+      font-size: 20px;
+    }
+
+    @include media(375) {
+      font-size: 18px;
+    }
+
+
+    &-sign {
+      background-color: blue;
+      border-radius: 50%;
+      padding: 4px 10px;
+      font-size: 35px;
+      font-family: 'Montserrat';
+
+      @include media(475) {
+        font-size: 25px;
+      }
+      
+    }
+
+   
+
+  }
+
+  &__btn {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 40px;
+    display: none;
+    align-items: center;
+
+    @include media(1050) {
+      display: flex;
+    }
+
+    @include media(475) {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+
+    @include media(1050) {
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      row-gap: 30px;
+      width: 100%;
+      height: 100%;
+      transition: 200ms linear;
+      transform: translateY(-100%);
+      overflow-y: auto;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 100;
+     
+
+      & .navbar__btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include media(1120){
+      column-gap: 55px;
+    }
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.94;
+    transition: 0.5s linear;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: solid 3px #92a8d1;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &.router-link-exact-active {
+      color: #fff;
+    }
+  }
+}

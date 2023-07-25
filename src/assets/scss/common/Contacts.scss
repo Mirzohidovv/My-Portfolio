@@ -1,0 +1,356 @@
+.contacts {
+
+
+
+
+    &__content {
+        &-title {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 35px;
+            background: #222;
+            padding: 92px 0;
+            width: 100%;
+            border-bottom: 1px solid #2e2d2d;
+            border-top: 1px solid #2e2d2d;
+            padding-left: 62px;
+            width: 100%;
+            background: #252525;
+
+            @include media(900) {
+                font-size: 50px;
+            }
+
+            @include media(750) {
+                font-size: 40px;
+            }
+
+            @include media(575) {
+                font-size: 30px;
+            }
+
+            @include media(375) {
+                padding-left: 40px;
+            }
+        }
+
+        &__add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            row-gap: 19px;
+
+            &-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                background: #282828;
+                width: 256px;
+                margin: 20px;
+                padding: 25px 10px;
+                box-shadow: 0 5px 15px 0 rgba(246, 246, 246, 0.2);
+                transition: .3s;
+
+                &:hover {
+                    // transform: translateY(-10px);
+                    transform: scale(1.1);
+                }
+
+            }
+
+            &-info {
+                text-align: center;
+
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.75;
+            }
+
+            &-icon {
+                color: #007CED;
+                font-size: 50px;
+                transition: .3s;
+
+
+            }
+
+
+
+
+
+            &-map {
+                margin-top: 29px;
+                width: 1650px;
+
+                & iframe {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    height: 146px;
+                    padding: 0 121px;
+                    transition: .3s;
+
+
+
+
+                    &:hover {
+                        opacity: .5;
+                    }
+
+                    @include media(1200) {
+                        width: 1200px;
+                    }
+
+                    @include media(990) {
+                        width: 1000px;
+                    }
+
+                    @include media(790) {
+                        width: 690px;
+                    }
+
+                    @include media(475) {
+                        width: 590px;
+                    }
+
+                    @include media(375) {
+                        width: 500px;
+                    }
+                }
+
+            }
+
+            &-lr {
+                display: flex;
+                column-gap: 234px;
+                justify-content: center;
+                align-items: center;
+                padding-top: 30px;
+                margin-bottom: 200px;
+                flex-direction: column;
+
+
+            }
+
+            &__left {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 30px;
+                flex-wrap: wrap;
+
+
+
+            }
+
+            &-number,
+            &-location,
+            &-email {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 25px;
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35px;
+
+                @include media(475) {
+                    font-size: 15px;
+                    column-gap: 15px;
+                }
+            }
+
+
+
+            &-svg {
+                color: rgb(44, 44, 228);
+                font-size: 30px;
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-top: 30px;
+
+                @include media(1200) {
+                    align-items: center;
+                }
+
+
+                &-title {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 35px;
+                    margin-bottom: 32px;
+                }
+
+                &-form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 19px;
+                    flex-wrap: nowrap;
+                    max-height: 220px;
+                    height: 100%;
+                    column-gap: 30px;
+
+
+                    @include media(1280) {
+                        flex-wrap: nowrap;
+
+
+
+                    }
+
+                    &__input {
+
+                        &-name,
+                        &-email {
+                            width: 240px;
+                            height: 95px;
+                            border-radius: 5px;
+                            border: 2px solid #555;
+                            background: #333;
+                            padding: 0px 10px 60px 10px;
+                            color: #fff;
+                            transition: .3s linear;
+
+
+                        }
+
+                        &-message {
+
+
+                            border-radius: 5px;
+                            border: 2px solid #555;
+                            background: #333;
+                            padding: 0px 10px 160px 10px;
+                            color: #fff;
+                            transition: .3s linear;
+                        }
+
+                        &-name:hover,
+                        &-email:hover,
+                        &-message:hover {
+                            border: 2px solid #5f5a5a;
+                        }
+
+                        &-name:focus,
+                        &-email:focus,
+                        &-message:focus {
+                            border: 2px solid #c3bdbd;
+                        }
+
+                    }
+
+
+                }
+
+                &-btn {
+                    border-radius: 30px;
+                    border: 3px solid #fff;
+                    background: #333;
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.75;
+                    padding: 10px 44px;
+
+                    transition: .3s;
+                    margin-top: 180px;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include media(1200) {
+                        display: flex;
+
+                    }
+
+                    @include media(575) {
+                        padding: 8px 38px;
+                        font-size: 16px;
+                        text-align: center;
+
+                    }
+
+                    &:hover {
+                        border: 3px solid #007CED;
+                        color: #007CED;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    #name,
+    #email,
+    #message {
+
+
+        @include media(620) {
+            padding-top: 8px;
+            height: 200px;
+        }
+    }
+
+    #name,
+    #email {
+        width: 400px;
+        padding: 5px 10px 30px 4px;
+        height: 200px;
+        box-sizing: border-box;
+
+        @include media(475){
+            width: 345px;
+        }
+        @include media(375){
+            width: 290px;
+        }
+    }
+
+    #message {
+        width: 400px;
+        height: 212px;
+        flex-shrink: 0;
+        padding: 5px 10px 180px 4px;
+
+        box-sizing: border-box;
+
+        @include media(475){
+            width: 345px;
+        }
+
+        @include media(375){
+            width: 290px;
+        }
+    }
+
+    #contact__form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+}

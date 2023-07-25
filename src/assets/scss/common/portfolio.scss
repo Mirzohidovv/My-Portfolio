@@ -1,0 +1,168 @@
+.all__maket {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+  @include media(575){
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+}
+
+#sign-eye {
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFF;
+  font-size: 40px;
+}
+
+
+
+.all__link {
+  display: none;
+}
+
+
+
+.all__link.active {
+  display: block;
+}
+
+
+
+.all_img {
+  width: 350px;
+  height: 240px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  position: relative;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+  @include media(475){
+    width: 300px;
+    height: 210px;
+  }
+  @include media(375){
+    width: 290px;
+    height: 200px;
+  }
+
+}
+
+.portfolio {
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 229px;
+  text-align: justify;
+
+  &__content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 124px;
+    margin-top: 80px;
+    row-gap: 10px;
+    
+    @include media(575){
+      align-items: center;
+      justify-content: center;
+      margin: 20px 8px;
+    }
+
+
+    &-title {
+      color: #FFF;
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.25;
+
+    }
+
+    &-item {
+      display: flex;
+      gap: 49px;
+align-items: center;
+      @include media(375){
+column-gap: 27px;
+      }
+    }
+
+    &-link {
+      color: #fff;
+      font-family: popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      cursor: pointer;
+      transition: .3s linear;
+
+
+    }
+
+    &-link:hover {
+      color: #007CED;
+    }
+
+    &-link-exact-active {
+      color: #007CED;
+    }
+
+
+  }
+
+  &-title {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 35px;
+    background: #222;
+    padding: 92px 0;
+    width: 100%;
+    border-bottom: 1px solid #2e2d2d;
+    border-top: 1px solid #2e2d2d;
+    padding-left: 62px;
+    width: 100%;
+    background: #252525;
+
+
+    @include media(900) {
+      font-size: 50px;
+    }
+
+    @include media(750) {
+      font-size: 40px;
+    }
+
+    @include media(575) {
+      font-size: 30px;
+    }
+
+    @include media(375) {
+      padding-left: 40px;
+    }
+  }
+}
